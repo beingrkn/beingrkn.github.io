@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0A0A0A;
+  --color-foreground: #FAFAFA;
+  --color-primary: #22D3EE;
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-glow: glow 4s ease-in-out infinite alternate;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+  @keyframes glow {
+    0% { opacity: 0.4; }
+    100% { opacity: 0.8; }
+  }
+}
+
+:root {
+  --background: 10 10 10;
+  --foreground: 250 250 250;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+}
+
+@layer base {
+  * {
+    @apply border-white/10;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Custom theme styling for Twitter embeds */
+.twitter-tweet-rendered,
+.twitter-tweet,
+iframe[id^="twitter-widget-"] {
+  background-color: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  border-radius: 1.5rem !important;
+  overflow: hidden !important;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7) !important;
+  filter: saturate(0.7) brightness(0.9) contrast(1.05) !important;
+}
+
