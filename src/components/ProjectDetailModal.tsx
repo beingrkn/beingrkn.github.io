@@ -1,7 +1,7 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
 import { X, ExternalLink, Cpu, Globe, Zap, MessageSquare, Trophy, UserPlus } from "lucide-react";
+import Image from "next/image";
 import { useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { Project } from "./Projects";
@@ -47,29 +47,20 @@ export const ProjectDetailModal = ({ isOpen, onClose, project }: ProjectDetailMo
   const isRandomGPT = project.title === "RandomGPT Discord Assistant";
 
   return (
-    <AnimatePresence>
-      {isOpen && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-6 lg:p-12">
-          {/* Backdrop */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={onClose}
-            className="absolute inset-0 bg-black/80 backdrop-blur-md"
-          />
+    isOpen ? (
+      <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-6 lg:p-12">
+        {/* Backdrop */}
+        <div
+          onClick={onClose}
+          className="absolute inset-0 bg-black/80"
+        />
 
-          {/* Modal Content */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            className="relative w-full max-w-4xl max-h-full overflow-y-auto bg-background border border-white/10 rounded-3xl shadow-2xl"
-          >
+        {/* Modal Content */}
+        <div className="relative max-h-full w-full max-w-4xl overflow-y-auto rounded-3xl border border-white/10 bg-background shadow-xl">
             {/* Close Button */}
             <button
               onClick={onClose}
-              className="absolute top-6 right-6 p-2 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-white/60 hover:text-white transition-all z-50"
+              className="absolute right-6 top-6 z-50 cursor-pointer rounded-full border border-white/10 bg-white/5 p-2 text-white/60"
             >
               <X className="w-5 h-5" />
             </button>
@@ -103,10 +94,12 @@ export const ProjectDetailModal = ({ isOpen, onClose, project }: ProjectDetailMo
               {/* Main Visual / Diagram / Video */}
               {isMinecraftDiscord && (
                 <div className="relative aspect-video mb-12 rounded-2xl overflow-hidden border border-white/10 bg-white/5">
-                  <img 
+                  <Image 
                     src="/projects/MinecraftDiscordVoiceVerification/workflow_minecraft_discord.png" 
                     alt="System Workflow Diagram"
-                    className="w-full h-full object-cover"
+                    fill
+                    sizes="100vw"
+                    className="object-cover"
                   />
                 </div>
               )}
@@ -114,10 +107,13 @@ export const ProjectDetailModal = ({ isOpen, onClose, project }: ProjectDetailMo
               {/* Dynamic workflow image if available */}
               {(!isMinecraftDiscord && project.workflowImage) && (
                 <div className="relative mb-12 rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex items-center justify-center">
-                  <img 
+                  <Image 
                     src={project.workflowImage} 
                     alt={`${project.title} Banner`}
-                    className="w-full h-auto max-h-[600px] object-contain"
+                    width={1200}
+                    height={675}
+                    sizes="100vw"
+                    className="h-auto max-h-[600px] w-full object-contain"
                   />
                 </div>
               )}
@@ -130,6 +126,7 @@ export const ProjectDetailModal = ({ isOpen, onClose, project }: ProjectDetailMo
                     title={`${project.title} Video`}
                     className="w-full h-full border-0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    loading="lazy"
                     allowFullScreen
                   />
                 </div>
@@ -147,10 +144,12 @@ export const ProjectDetailModal = ({ isOpen, onClose, project }: ProjectDetailMo
                           Mrify Command
                         </h3>
                         <div className="relative aspect-video mb-6 rounded-xl overflow-hidden border border-white/10 bg-white/5">
-                          <img 
+                          <Image 
                             src="/projects/RandomGPT/mrify_image.png" 
                             alt="Mrify Command Example"
-                            className="w-full h-full object-cover"
+                            fill
+                            sizes="(min-width: 1024px) 50vw, 100vw"
+                            className="object-cover"
                           />
                         </div>
                         <p className="text-white/60 leading-relaxed mb-4 text-sm md:text-base">
@@ -164,10 +163,12 @@ export const ProjectDetailModal = ({ isOpen, onClose, project }: ProjectDetailMo
                           Generative AI Chatbot
                         </h3>
                         <div className="relative aspect-video mb-6 rounded-xl overflow-hidden border border-white/10 bg-white/5">
-                          <img 
+                          <Image 
                             src="/projects/RandomGPT/generativeaichatbot.jpg" 
                             alt="AI Chatbot Preview"
-                            className="w-full h-full object-cover"
+                            fill
+                            sizes="(min-width: 1024px) 50vw, 100vw"
+                            className="object-cover"
                           />
                         </div>
                         <p className="text-white/60 leading-relaxed text-sm md:text-base">
@@ -181,10 +182,12 @@ export const ProjectDetailModal = ({ isOpen, onClose, project }: ProjectDetailMo
                           Live IPL Scoreboard
                         </h3>
                         <div className="relative aspect-video mb-6 rounded-xl overflow-hidden border border-white/10 bg-white/5">
-                          <img 
+                          <Image 
                             src="/projects/RandomGPT/scoreboard_image.png" 
                             alt="IPL Scoreboard Preview"
-                            className="w-full h-full object-cover"
+                            fill
+                            sizes="(min-width: 1024px) 50vw, 100vw"
+                            className="object-cover"
                           />
                         </div>
                         <p className="text-white/60 leading-relaxed text-sm md:text-base">
@@ -198,10 +201,12 @@ export const ProjectDetailModal = ({ isOpen, onClose, project }: ProjectDetailMo
                           Smart Voice Channel Join System
                         </h3>
                         <div className="relative aspect-video mb-6 rounded-xl overflow-hidden border border-white/10 bg-white/5">
-                          <img 
+                          <Image 
                             src="/projects/RandomGPT/drag_image.jpg" 
                             alt="VC Join System Preview"
-                            className="w-full h-full object-cover"
+                            fill
+                            sizes="(min-width: 1024px) 50vw, 100vw"
+                            className="object-cover"
                           />
                         </div>
                         <p className="text-white/60 leading-relaxed text-sm md:text-base">
@@ -264,6 +269,7 @@ export const ProjectDetailModal = ({ isOpen, onClose, project }: ProjectDetailMo
                                 title={`${project.title} Video Section ${idx}`}
                                 className="w-full h-full border-0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                loading="lazy"
                                 allowFullScreen
                               />
                             </div>
@@ -284,8 +290,7 @@ export const ProjectDetailModal = ({ isOpen, onClose, project }: ProjectDetailMo
                           border: 1px solid rgba(255, 255, 255, 0.05) !important;
                           border-radius: 1.5rem !important;
                           overflow: hidden !important;
-                          box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7) !important;
-                          filter: saturate(0.7) brightness(0.9) contrast(1.05) !important;
+                          box-shadow: 0 6px 18px -12px rgba(0, 0, 0, 0.55) !important;
                         }
                       `}} />
                       <blockquote className="twitter-tweet" data-theme="dark" data-align="center" data-link-color="#22d3ee">
@@ -353,10 +358,10 @@ export const ProjectDetailModal = ({ isOpen, onClose, project }: ProjectDetailMo
                         target="_blank"
                         rel="noopener noreferrer"
                         className={cn(
-                          "w-full py-4 rounded-2xl flex items-center justify-center gap-2 font-bold transition-all text-center justify-center",
+                          "flex w-full items-center justify-center gap-2 rounded-2xl py-4 text-center font-bold",
                           link.label === "TRY_IT"
-                            ? "bg-white text-black hover:bg-white/90"
-                            : "bg-white/5 border border-white/10 text-white hover:bg-white/10"
+                            ? "bg-white text-black"
+                            : "border border-white/10 bg-white/5 text-white"
                         )}
                       >
                         {link.label === "TRY_IT" ? "Try It Live" : "View on GitHub"}
@@ -370,7 +375,7 @@ export const ProjectDetailModal = ({ isOpen, onClose, project }: ProjectDetailMo
                         href={project.detailsLink || project.visitLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-full py-4 bg-white text-black font-bold rounded-2xl flex items-center justify-center gap-2 hover:bg-white/90 transition-all text-center justify-center"
+                        className="flex w-full items-center justify-center gap-2 rounded-2xl bg-white py-4 text-center font-bold text-black"
                       >
                         {project.visitLink?.includes("youtube.com") || project.visitLink?.includes("youtu.be")
                           ? "Watch on YouTube"
@@ -388,9 +393,8 @@ export const ProjectDetailModal = ({ isOpen, onClose, project }: ProjectDetailMo
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
-      )}
-    </AnimatePresence>
+      ) : null
   );
 };

@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 
@@ -10,7 +9,6 @@ interface ContactMethod {
   href: string;
   isCopyable?: boolean;
   icon: (className?: string) => React.ReactNode;
-  hoverColor: string;
 }
 
 const MailIcon = ({ className }: { className?: string }) => (
@@ -76,14 +74,12 @@ export const Contact = () => {
       value: "contact@beingrkn.com",
       href: "mailto:contact@beingrkn.com",
       icon: (className) => <MailIcon className={className} />,
-      hoverColor: "group-hover:text-white",
     },
     {
       name: "Twitter",
       value: "mebeingrkn",
       href: "https://x.com/mebeingrkn",
       icon: (className) => <XIcon className={className} />,
-      hoverColor: "group-hover:text-sky-400",
     },
     {
       name: "Discord",
@@ -91,14 +87,12 @@ export const Contact = () => {
       href: "#",
       isCopyable: true,
       icon: (className) => <DiscordIcon className={className} />,
-      hoverColor: "group-hover:text-[#5865F2]",
     },
     {
       name: "Instagram",
       value: "beingrkn",
       href: "https://instagram.com/beingrkn",
       icon: (className) => <InstagramIcon className={className} />,
-      hoverColor: "group-hover:text-[#E1306C]",
     },
     {
       name: "Signal",
@@ -106,19 +100,13 @@ export const Contact = () => {
       href: "#",
       isCopyable: true,
       icon: (className) => <SignalIcon className={className} />,
-      hoverColor: "group-hover:text-[#3A76F0]",
     },
   ];
 
   return (
     <section id="contact" className="py-24 bg-background relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 relative z-10 flex flex-col items-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-16 text-center"
-        >
+        <div className="mb-16 text-center">
           <h2 className="text-sm uppercase tracking-[0.3em] text-white/40 font-bold mb-4">
             Connect
           </h2>
@@ -128,18 +116,18 @@ export const Contact = () => {
           <p className="text-white/60 text-lg max-w-xl mx-auto">
             Let&apos;s discuss game development, server systems, scaling Discord tools, or potential collaborations.
           </p>
-        </motion.div>
+        </div>
 
         {/* Minimalist social links grid/row without boxes */}
         <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-6 max-w-4xl mx-auto mt-6">
-          {contactMethods.map((method, index) => {
+          {contactMethods.map((method) => {
             const isCopy = method.isCopyable;
             const isCopied = copiedId === method.name;
 
             const iconElement = (
               <span className={cn(
-                "text-white/40 transition-colors duration-300 flex items-center shrink-0",
-                method.hoverColor
+                "flex shrink-0 items-center text-white/40",
+                isCopied && "text-emerald-400"
               )}>
                 {method.icon("w-6 h-6")}
               </span>
@@ -147,8 +135,8 @@ export const Contact = () => {
 
             const textElement = (
               <span className={cn(
-                "text-base font-semibold transition-colors duration-300 select-all",
-                isCopied ? "text-emerald-400 font-bold" : "text-white/60 group-hover:text-white"
+                "select-all text-base font-semibold",
+                isCopied ? "font-bold text-emerald-400" : "text-white/60"
               )}>
                 {isCopied ? "copied!" : method.value}
               </span>
@@ -156,37 +144,29 @@ export const Contact = () => {
 
             if (isCopy) {
               return (
-                <motion.button
+                <button
                   key={method.name}
                   onClick={(e) => handleCopy(e, method.value, method.name)}
-                  initial={{ opacity: 0, y: 15 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.05, duration: 0.5 }}
-                  className="flex items-center gap-3 group cursor-pointer select-none py-1.5 transition-all duration-300 hover:-translate-y-0.5"
+                  className="group flex cursor-pointer items-center gap-3 py-1.5 select-none"
                   title={`Copy ${method.name}`}
                 >
                   {iconElement}
                   {textElement}
-                </motion.button>
+                </button>
               );
             }
 
             return (
-              <motion.a
+              <a
                 key={method.name}
                 href={method.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                initial={{ opacity: 0, y: 15 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.05, duration: 0.5 }}
-                className="flex items-center gap-3 group py-1.5 transition-all duration-300 hover:-translate-y-0.5"
+                className="group flex items-center gap-3 py-1.5"
               >
                 {iconElement}
                 {textElement}
-              </motion.a>
+              </a>
             );
           })}
         </div>

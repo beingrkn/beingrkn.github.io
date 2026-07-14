@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight, Code2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ProjectDetailModal } from "./ProjectDetailModal";
@@ -205,12 +204,7 @@ export const Projects = () => {
   return (
     <section id="projects" className="py-24 bg-background overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-16"
-        >
+        <div className="mb-16">
           <h2 className="text-sm uppercase tracking-[0.3em] text-white/40 font-bold mb-4">
             Featured Work
           </h2>
@@ -231,10 +225,10 @@ export const Projects = () => {
                   key={cat}
                   onClick={() => setActiveCategory(cat)}
                   className={cn(
-                    "px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 border",
+                    "rounded-full border px-4 py-2 text-xs font-bold uppercase tracking-wider",
                     activeCategory === cat
                       ? "bg-white text-black border-white"
-                      : "bg-white/5 text-white/40 border-white/5 hover:border-white/20 hover:text-white"
+                      : "border-white/5 bg-white/5 text-white/40"
                   )}
                 >
                   {cat}
@@ -242,63 +236,52 @@ export const Projects = () => {
               ))}
             </div>
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div 
-          layout
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-        >
-          <AnimatePresence mode="popLayout">
-            {filteredProjects.map((project) => (
-              <motion.div
-                key={project.title}
-                layout
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
-                onClick={() => setSelectedProject(project)}
-                className="group relative flex flex-col p-8 rounded-3xl bg-white/[0.02] border border-white/5 transition-all duration-500 cursor-pointer hover:bg-white/[0.04]"
-              >
-                
-                <div className="relative z-10 flex flex-col h-full">
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {project.tags.map((tag) => (
-                      <span 
-                        key={tag}
-                        className="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] font-bold uppercase tracking-widest text-white/60"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  <h4 className="text-xl font-bold text-white mb-3 transition-colors duration-300">
-                    {project.title}
-                  </h4>
-                  
-                  <p className="text-white/50 text-sm leading-relaxed mb-8 line-clamp-3">
-                    {project.description}
-                  </p>
-
-                  <div className="mt-auto flex items-center justify-between pt-6 border-t border-white/5">
-                    <div className="flex items-center gap-2 text-white/30">
-                      <Code2 className="w-3.5 h-3.5" />
-                      <span className="text-[10px] font-medium tracking-wide truncate max-w-[120px]">
-                        {project.tech}
-                      </span>
-                    </div>
-                    
-                    <button className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-white group/btn">
-                      {project.cta}
-                      <ArrowUpRight className="w-3.5 h-3.5 transition-transform" />
-                    </button>
-                  </div>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {filteredProjects.map((project) => (
+            <div
+              key={project.title}
+              onClick={() => setSelectedProject(project)}
+              className="group relative flex cursor-pointer flex-col rounded-3xl border border-white/5 bg-white/[0.02] p-8"
+            >
+              <div className="relative z-10 flex h-full flex-col">
+                <div className="mb-6 flex flex-wrap gap-2">
+                  {project.tags.map((tag) => (
+                    <span 
+                      key={tag}
+                      className="rounded-md border border-white/10 bg-white/5 px-2.5 py-1 text-[10px] font-bold uppercase tracking-widest text-white/60"
+                    >
+                      {tag}
+                    </span>
+                  ))}
                 </div>
-              </motion.div>
-            ))}
-          </AnimatePresence>
-        </motion.div>
+
+                <h4 className="mb-3 text-xl font-bold text-white">
+                  {project.title}
+                </h4>
+                
+                <p className="mb-8 line-clamp-3 text-sm leading-relaxed text-white/50">
+                  {project.description}
+                </p>
+
+                <div className="mt-auto flex items-center justify-between border-t border-white/5 pt-6">
+                  <div className="flex items-center gap-2 text-white/30">
+                    <Code2 className="h-3.5 w-3.5" />
+                    <span className="max-w-[120px] truncate text-[10px] font-medium tracking-wide">
+                      {project.tech}
+                    </span>
+                  </div>
+                  
+                  <button className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-white">
+                    {project.cta}
+                    <ArrowUpRight className="h-3.5 w-3.5" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
 
       <ProjectDetailModal 

@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, ArrowUpRight, Play, X } from "lucide-react";
+import Image from "next/image";
 
 const screenshots = [
   "/games/chick-chick-go/screenshot-1.png",
@@ -68,12 +68,7 @@ export const Games = () => {
     <>
       <section id="games" className="py-24 bg-background relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-16"
-          >
+          <div className="mb-16">
             <h2 className="text-sm uppercase tracking-[0.3em] text-white/40 font-bold mb-4">
               Playable Work
             </h2>
@@ -91,28 +86,24 @@ export const Games = () => {
                 href="https://beingrkn.itch.io/chick-chick-go"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3.5 bg-white/5 hover:bg-white/10 text-white font-semibold rounded-full border border-white/10 transition-all flex items-center gap-2 self-start md:self-auto"
+                className="flex items-center gap-2 self-start rounded-full border border-white/10 bg-white/5 px-6 py-3.5 font-semibold text-white md:self-auto"
               >
                 Play on itch.io
                 <ArrowUpRight className="w-4 h-4" />
               </a>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.article
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="rounded-[2rem] bg-white/[0.02] border border-white/5 overflow-hidden"
-          >
+          <article className="overflow-hidden rounded-[2rem] border border-white/5 bg-white/[0.02]">
             <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch">
               <div className="lg:col-span-7">
-                <div className="relative aspect-[16/10] lg:aspect-auto lg:h-full overflow-hidden">
-                  <img
+                <div className="relative aspect-[16/10] overflow-hidden lg:h-full lg:aspect-auto">
+                  <Image
                     src="/games/chick-chick-go/banner.png"
                     alt="Chick Chick Go banner"
-                    className="w-full h-full object-cover"
+                    fill
+                    sizes="(min-width: 1024px) 58vw, 100vw"
+                    className="object-cover"
                   />
                 </div>
               </div>
@@ -147,7 +138,7 @@ export const Games = () => {
                 <div className="mt-8 flex flex-col sm:flex-row gap-3">
                   <button
                     onClick={() => setIsOpen(true)}
-                    className="px-6 py-3.5 bg-white text-black font-semibold rounded-full transition-all flex items-center justify-center gap-2 hover:bg-white/90"
+                    className="flex cursor-pointer items-center justify-center gap-2 rounded-full bg-white px-6 py-3.5 font-semibold text-black"
                   >
                     View Details
                     <ArrowUpRight className="w-4 h-4" />
@@ -157,7 +148,7 @@ export const Games = () => {
                     href="https://www.youtube.com/watch?v=14FZys3CwiQ"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-6 py-3.5 bg-white/5 text-white font-semibold rounded-full border border-white/10 hover:bg-white/10 transition-all flex items-center justify-center gap-2"
+                    className="flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-6 py-3.5 font-semibold text-white"
                   >
                     <Play className="w-4 h-4" />
                     Watch Gameplay
@@ -165,30 +156,21 @@ export const Games = () => {
                 </div>
               </div>
             </div>
-          </motion.article>
+          </article>
         </div>
       </section>
 
-      <AnimatePresence>
-        {isOpen && (
-          <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-6 lg:p-12">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setIsOpen(false)}
-              className="absolute inset-0 bg-black/80 backdrop-blur-md"
-            />
+      {isOpen && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-6 lg:p-12">
+          <div
+            onClick={() => setIsOpen(false)}
+            className="absolute inset-0 bg-black/80"
+          />
 
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              className="relative w-full max-w-6xl max-h-[90vh] overflow-y-auto bg-background border border-white/10 rounded-[2rem] shadow-2xl"
-            >
+          <div className="relative max-h-[90vh] w-full max-w-6xl overflow-y-auto rounded-[2rem] border border-white/10 bg-background shadow-xl">
               <button
                 onClick={() => setIsOpen(false)}
-                className="absolute top-5 right-5 z-20 p-2 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-white/60 hover:text-white transition-all"
+                className="absolute right-5 top-5 z-20 cursor-pointer rounded-full border border-white/10 bg-white/5 p-2 text-white/60"
                 aria-label="Close game details"
               >
                 <X className="w-5 h-5" />
@@ -221,7 +203,7 @@ export const Games = () => {
                       href="https://beingrkn.itch.io/chick-chick-go"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-6 py-3.5 bg-white text-black font-semibold rounded-full transition-all inline-flex items-center justify-center gap-2 hover:bg-white/90 self-start"
+                      className="inline-flex self-start rounded-full bg-white px-6 py-3.5 font-semibold text-black"
                     >
                       Play on itch.io
                       <ArrowUpRight className="w-4 h-4" />
@@ -230,11 +212,13 @@ export const Games = () => {
                 </div>
 
                 <div className="rounded-[2rem] overflow-hidden border border-white/10 bg-white/[0.02] mb-6">
-                  <div className="aspect-[16/9] md:aspect-[16/8] overflow-hidden">
-                    <img
+                  <div className="relative aspect-[16/9] overflow-hidden md:aspect-[16/8]">
+                    <Image
                       src="/games/chick-chick-go/banner.png"
                       alt="Chick Chick Go banner"
-                      className="w-full h-full object-cover"
+                      fill
+                      sizes="100vw"
+                      className="object-cover"
                     />
                   </div>
                 </div>
@@ -245,6 +229,7 @@ export const Games = () => {
                       title="Chick Chick Go itch embed"
                       src="https://itch.io/embed/4771180?linkback=true"
                       className="w-full h-[190px] md:h-[210px] border-0 rounded-[1.5rem] bg-black/20"
+                      loading="lazy"
                     />
                   </div>
 
@@ -254,6 +239,7 @@ export const Games = () => {
                       title="Chick Chick Go gameplay video"
                       className="w-full h-full border-0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      loading="lazy"
                       allowFullScreen
                     />
                   </div>
@@ -267,61 +253,55 @@ export const Games = () => {
                       onClick={() => setActiveScreenshotIndex(index)}
                       className="rounded-[2rem] overflow-hidden border border-white/5 bg-white/[0.02] cursor-pointer text-left"
                     >
-                      <div className="aspect-[16/10] overflow-hidden">
-                        <img
+                      <div className="relative aspect-[16/10] overflow-hidden">
+                        <Image
                           src={screenshot}
                           alt={`Chick Chick Go screenshot ${index + 1}`}
-                          className="w-full h-full object-cover transition-transform duration-300 hover:scale-[1.02]"
+                          fill
+                          sizes="(min-width: 768px) 50vw, 100vw"
+                          className="object-cover"
                         />
                       </div>
                     </button>
                   ))}
                 </div>
               </div>
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
+            </div>
+        </div>
+      )}
 
-      <AnimatePresence>
-        {activeScreenshotIndex !== null && (
-          <div className="fixed inset-0 z-[120] flex items-center justify-center p-4 md:p-6">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setActiveScreenshotIndex(null)}
-              className="absolute inset-0 bg-black/90 backdrop-blur-md"
-            />
+      {activeScreenshotIndex !== null && (
+        <div className="fixed inset-0 z-[120] flex items-center justify-center p-4 md:p-6">
+          <div
+            onClick={() => setActiveScreenshotIndex(null)}
+            className="absolute inset-0 bg-black/90"
+          />
 
-            <motion.div
-              initial={{ opacity: 0, scale: 0.96 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.96 }}
-              className="relative w-full max-w-6xl"
-            >
+          <div className="relative w-full max-w-6xl">
               <button
                 type="button"
                 onClick={() => setActiveScreenshotIndex(null)}
-                className="absolute top-3 right-3 md:top-5 md:right-5 z-20 p-2 rounded-full bg-black/50 hover:bg-black/70 border border-white/10 text-white/70 hover:text-white transition-all"
+                className="absolute right-3 top-3 z-20 cursor-pointer rounded-full border border-white/10 bg-black/50 p-2 text-white/70 md:right-5 md:top-5"
                 aria-label="Close screenshot viewer"
               >
                 <X className="w-5 h-5" />
               </button>
 
               <div className="relative rounded-[2rem] overflow-hidden border border-white/10 bg-black">
-                <div className="aspect-[16/10] md:aspect-[16/9]">
-                  <img
+                <div className="relative aspect-[16/10] md:aspect-[16/9]">
+                  <Image
                     src={screenshots[activeScreenshotIndex]}
                     alt={`Chick Chick Go screenshot ${activeScreenshotIndex + 1}`}
-                    className="w-full h-full object-contain"
+                    fill
+                    sizes="100vw"
+                    className="object-contain"
                   />
                 </div>
 
                 <button
                   type="button"
                   onClick={showPreviousScreenshot}
-                  className="absolute left-3 top-1/2 -translate-y-1/2 md:left-5 p-3 rounded-full bg-black/50 hover:bg-black/70 border border-white/10 text-white transition-all"
+                  className="absolute left-3 top-1/2 -translate-y-1/2 cursor-pointer rounded-full border border-white/10 bg-black/50 p-3 text-white md:left-5"
                   aria-label="Previous screenshot"
                 >
                   <ArrowLeft className="w-5 h-5" />
@@ -330,7 +310,7 @@ export const Games = () => {
                 <button
                   type="button"
                   onClick={showNextScreenshot}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 md:right-5 p-3 rounded-full bg-black/50 hover:bg-black/70 border border-white/10 text-white transition-all"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer rounded-full border border-white/10 bg-black/50 p-3 text-white md:right-5"
                   aria-label="Next screenshot"
                 >
                   <ArrowRight className="w-5 h-5" />
@@ -340,10 +320,9 @@ export const Games = () => {
                   {activeScreenshotIndex + 1} / {screenshots.length}
                 </div>
               </div>
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
+            </div>
+        </div>
+      )}
     </>
   );
 };

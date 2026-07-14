@@ -1,7 +1,5 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 import { BackgroundGlow } from "./BackgroundGlow";
 
 export const Hero = () => {
@@ -12,81 +10,54 @@ export const Hero = () => {
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
         {/* Left Content */}
         <div className="lg:col-span-8 flex flex-col items-start">
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.15, duration: 0.8 }}
-            className="text-sm md:text-base uppercase tracking-[0.3em] text-white/40 font-bold mb-6"
-          >
+          <p className="mb-6 text-sm font-bold uppercase tracking-[0.3em] text-white/40 md:text-base">
             Hello, I&apos;m RKN
-          </motion.p>
+          </p>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white mb-6 leading-[1.1]"
-          >
+          <h1 className="mb-6 text-5xl font-bold leading-[1.1] tracking-tight text-white md:text-7xl lg:text-8xl">
             Building Games, <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-cyan-400 to-blue-500">
               Tools, and Online Communities
             </span>
-          </motion.h1>
+          </h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-            className="text-lg md:text-xl text-white/60 max-w-2xl mb-8 leading-relaxed"
-          >
+          <p className="mb-8 max-w-2xl text-lg leading-relaxed text-white/60 md:text-xl">
             Developer scaling and managing Discord tools that power <span className="text-white">76.8k+ communities</span> and <span className="text-white">17.3M+ members</span>, Minecraft servers, indie games, and meaningful internet products.
-          </motion.p>
+          </p>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
-            className="text-base text-white/40 max-w-xl mb-10"
-          >
+          <p className="mb-10 max-w-xl text-base text-white/40">
             Currently Head of Operations at R.O.T.I. Passionate about game development, community systems, backend infrastructure, and AI tools.
-          </motion.p>
+          </p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.8 }}
-            className="flex flex-wrap gap-4"
-          >
+          <div className="flex flex-wrap gap-4">
             <a
               href="#projects"
-              className="px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-white/90 transition-all flex items-center gap-2 group shadow-xl shadow-white/5"
+              className="flex items-center gap-2 rounded-full bg-white px-8 py-4 font-semibold text-black shadow-lg shadow-white/5"
             >
               Explore My Work
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="h-4 w-4" />
             </a>
             <a
               href="mailto:contact@beingrkn.com"
-              className="px-8 py-4 bg-white/5 text-white font-semibold rounded-full border border-white/10 hover:bg-white/10 transition-all flex items-center gap-2"
+              className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-8 py-4 font-semibold text-white"
             >
               Get in Touch
             </a>
-          </motion.div>
+          </div>
         </div>
 
         {/* Right Side - Profile Image */}
-        <div className="lg:col-span-4 hidden lg:block relative">
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.4, duration: 1 }}
-            className="w-full aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl"
-          >
-            <img
+        <div className="relative hidden lg:col-span-4 lg:block">
+          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl shadow-xl">
+            <Image
               src="/pfpsite.png"
               alt="RKN"
-              className="w-full h-full object-cover"
+              fill
+              priority
+              sizes="(min-width: 1024px) 28vw, 0px"
+              className="object-cover"
             />
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

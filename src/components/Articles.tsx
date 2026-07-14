@@ -1,18 +1,11 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 
 export const Articles = () => {
   return (
     <section id="articles" className="py-24 bg-background relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-16"
-        >
+        <div className="mb-16">
           <h2 className="text-sm uppercase tracking-[0.3em] text-white/40 font-bold mb-4">
             Writing
           </h2>
@@ -22,25 +15,23 @@ export const Articles = () => {
           <p className="text-white/60 text-lg max-w-2xl">
             Thoughts on building, validation, and the uncomfortable questions worth asking before shipping.
           </p>
-        </motion.div>
+        </div>
 
-        <motion.a
+        <a
           href="https://x.com/mebeingrkn/status/2071960824038797579"
           target="_blank"
           rel="noopener noreferrer"
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="group block rounded-[2rem] bg-white/[0.02] border border-white/5 overflow-hidden hover:bg-white/[0.03] transition-colors"
+          className="group block overflow-hidden rounded-[2rem] border border-white/5 bg-white/[0.02]"
         >
           <div className="grid grid-cols-1 lg:grid-cols-12">
             <div className="lg:col-span-7">
-              <div className="aspect-[16/9] lg:aspect-auto lg:h-full overflow-hidden">
-                <img
+              <div className="relative aspect-[16/9] overflow-hidden lg:h-full lg:aspect-auto">
+                <Image
                   src="/articles/youre-probably-building-something-nobody-asked-for/banner.png"
                   alt="You’re Probably Building Something Nobody Asked For article banner"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                  fill
+                  sizes="(min-width: 1024px) 58vw, 100vw"
+                  className="object-cover"
                 />
               </div>
             </div>
@@ -58,11 +49,11 @@ export const Articles = () => {
 
               <div className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-white">
                 Read on X
-                <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                <ArrowUpRight className="h-4 w-4" />
               </div>
             </div>
           </div>
-        </motion.a>
+        </a>
       </div>
     </section>
   );

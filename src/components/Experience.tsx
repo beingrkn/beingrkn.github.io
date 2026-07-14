@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -72,33 +69,21 @@ export const Experience = () => {
   return (
     <section id="journey" className="py-24 relative overflow-hidden bg-background">
       <div className="max-w-5xl mx-auto px-6 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-16"
-        >
+        <div className="mb-16">
           <h3 className="text-4xl md:text-5xl font-bold text-white tracking-tight">
             Career Path
           </h3>
-        </motion.div>
+        </div>
 
         <div className="relative border-l border-white/5 ml-4 md:ml-0 space-y-12">
           {experiences.map((exp, index) => {
             const isPresent = exp.date.toLowerCase().includes("present");
             return (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1, duration: 0.5 }}
-                className="relative pl-8 md:pl-12 py-4"
-              >
+              <div key={index} className="relative pl-8 md:pl-12 py-4">
                 {/* Timeline Dot */}
                 <div 
                   className={cn(
-                    "absolute left-[-5px] top-7 w-2.5 h-2.5 rounded-full border border-background ring-4 transition-all duration-300",
+                    "absolute left-[-5px] top-7 h-2.5 w-2.5 rounded-full border border-background ring-4",
                     isPresent 
                       ? "bg-white ring-white/20" 
                       : "bg-white/10 ring-background"
@@ -120,10 +105,10 @@ export const Experience = () => {
                         href={exp.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/60 text-xs font-bold uppercase tracking-wider hover:bg-white/10 hover:text-white transition-all flex items-center gap-1.5 group/link"
+                        className="group/link flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-bold uppercase tracking-wider text-white/60"
                       >
                         {exp.company}
-                        <ExternalLink className="w-3 h-3 text-white/40 group-hover/link:text-white transition-all" />
+                        <ExternalLink className="h-3 w-3 text-white/40" />
                       </a>
                     ) : (
                       <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/30 text-xs font-bold uppercase tracking-wider cursor-default">
@@ -141,23 +126,17 @@ export const Experience = () => {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </div>
             );
           })}
         </div>
 
         {/* Highlighted Box */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.6 }}
-          className="mt-20 p-8 rounded-3xl bg-white/[0.02] border border-white/5 backdrop-blur-sm relative overflow-hidden"
-        >
+        <div className="relative mt-20 overflow-hidden rounded-3xl border border-white/5 bg-white/[0.02] p-8">
           <p className="text-white/60 text-sm md:text-base leading-relaxed relative z-10">
             I have also worked for popular creators like <span className="text-white font-medium">Mythpat</span> and <span className="text-white font-medium">Andreobee</span> managing gaming community events, and served as a community moderator at <span className="text-white font-medium">WEX Mobile</span>. These roles highlight my deep community management experience.
           </p>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

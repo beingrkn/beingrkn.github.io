@@ -1,7 +1,5 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { MessageSquare, Heart, Repeat2, Bookmark, Share2, ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 
 interface Tweet {
   id: string;
@@ -114,12 +112,7 @@ export const TwitterFeed = () => {
   return (
     <section id="feed" className="py-24 bg-background relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6"
-        >
+        <div className="mb-16 flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div>
             <h2 className="text-sm uppercase tracking-[0.3em] text-white/40 font-bold mb-4">
               Build In Public
@@ -136,36 +129,35 @@ export const TwitterFeed = () => {
             href="https://x.com/mebeingrkn"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-3.5 bg-white/5 hover:bg-white/10 text-white font-semibold rounded-full border border-white/10 transition-all flex items-center gap-2 self-start md:self-auto group"
+            className="group flex items-center gap-2 self-start rounded-full border border-white/10 bg-white/5 px-6 py-3.5 font-semibold text-white md:self-auto"
           >
-            <XLogo className="w-4 h-4" />
+            <XLogo className="h-4 w-4" />
             Follow @mebeingrkn
-            <ArrowUpRight className="w-4 h-4 transition-transform" />
+            <ArrowUpRight className="h-4 w-4" />
           </a>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {tweets.map((tweet, index) => (
-            <motion.a
+          {tweets.map((tweet) => (
+            <a
               key={tweet.id}
               href={tweet.tweetUrl}
               target="_blank"
               rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1, duration: 0.5 }}
-              className="flex flex-col p-6 rounded-3xl bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] transition-all duration-300 group relative h-full"
+              className="group relative flex h-full flex-col rounded-3xl border border-white/5 bg-white/[0.02] p-6"
             >
               {/* Card top border glow on hover */}
-              <div className="absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
               {/* Author Info */}
               <div className="flex items-center gap-3 mb-4">
-                <img
+                <Image
                   src={tweet.author.avatar}
                   alt={tweet.author.name}
-                  className="w-10 h-10 rounded-full border border-white/10"
+                  width={40}
+                  height={40}
+                  sizes="40px"
+                  className="h-10 w-10 rounded-full border border-white/10"
                 />
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-1">
@@ -180,7 +172,7 @@ export const TwitterFeed = () => {
                     {tweet.author.handle}
                   </span>
                 </div>
-                <XLogo className="w-4 h-4 text-white/30 group-hover:text-white transition-colors" />
+                <XLogo className="h-4 w-4 text-white/30" />
               </div>
 
               {/* Tweet Content */}
@@ -190,14 +182,14 @@ export const TwitterFeed = () => {
 
               {/* Tweet Video */}
               {tweet.videoUrl && (
-                <div className="relative w-full rounded-2xl overflow-hidden mb-4 border border-white/5 aspect-video bg-black/40 group/video">
+                <div className="relative mb-4 aspect-video w-full overflow-hidden rounded-2xl border border-white/5 bg-black/40">
                   <video
                     src={tweet.videoUrl}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover/video:scale-[1.03]"
+                    className="h-full w-full object-cover"
                     muted
-                    loop
                     playsInline
-                    autoPlay
+                    preload="metadata"
+                    controls
                   />
                 </div>
               )}
@@ -218,28 +210,28 @@ export const TwitterFeed = () => {
 
                 {/* Tweet Stats / Actions */}
                 <div className="flex items-center justify-between text-white/40 text-xs px-1">
-                  <div className="flex items-center gap-1.5 hover:text-blue-400 transition-colors" title="Replies">
+                  <div className="flex items-center gap-1.5" title="Replies">
                     <MessageSquare className="w-3.5 h-3.5" />
                     {tweet.stats.replies !== "0" && <span>{tweet.stats.replies}</span>}
                   </div>
-                  <div className="flex items-center gap-1.5 hover:text-green-400 transition-colors" title="Reposts">
+                  <div className="flex items-center gap-1.5" title="Reposts">
                     <Repeat2 className="w-3.5 h-3.5" />
                     {tweet.stats.retweets !== "0" && <span>{tweet.stats.retweets}</span>}
                   </div>
-                  <div className="flex items-center gap-1.5 hover:text-pink-500 transition-colors" title="Likes">
+                  <div className="flex items-center gap-1.5" title="Likes">
                     <Heart className="w-3.5 h-3.5" />
                     {tweet.stats.likes !== "0" && <span>{tweet.stats.likes}</span>}
                   </div>
-                  <div className="flex items-center gap-1.5 hover:text-blue-400 transition-colors" title="Bookmarks">
+                  <div className="flex items-center gap-1.5" title="Bookmarks">
                     <Bookmark className="w-3.5 h-3.5" />
                     {tweet.stats.bookmarks !== "0" && <span>{tweet.stats.bookmarks}</span>}
                   </div>
-                  <div className="flex items-center gap-1.5 hover:text-blue-400 transition-colors" title="Share">
+                  <div className="flex items-center gap-1.5" title="Share">
                     <Share2 className="w-3.5 h-3.5" />
                   </div>
                 </div>
               </div>
-            </motion.a>
+            </a>
           ))}
         </div>
       </div>
