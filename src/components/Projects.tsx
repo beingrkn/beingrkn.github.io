@@ -125,6 +125,29 @@ const projects: Project[] = [
     visitLink: "https://www.youtube.com/watch?v=ULL151OcQ1s"
   },
   {
+    title: "Chick Chick Go",
+    category: "Game Dev",
+    tags: ["Indie Game", "Arcade Survival", "Game Jam"],
+    description: "A fast survival game where you dodge foxes, chain corn pickups, and grab upgrades as the run gets more chaotic.",
+    tech: "Game Dev, Arcade Design",
+    cta: "Read More",
+    fullDescription: "Chick Chick Go is a cheerful arcade survival game built around quick movement, escalating pressure, and satisfying upgrade choices. You play as a chicken trying to survive while collecting corn, avoiding foxes, and pushing your run further each time.\n\nThe goal was to keep the game instantly readable and fun while still making every run feel a little more intense. Bright visuals, simple goals, and short survival loops make it easy to jump in while still leaving room for mastery.",
+    fullTech: "Arcade Gameplay Design, Survival Loop Design, UI Polish",
+    workflowImage: "/games/chick-chick-go/banner.png",
+    videoEmbed: "https://www.youtube.com/embed/14FZys3CwiQ",
+    visitLink: "https://beingrkn.itch.io/chick-chick-go",
+    actionLinks: [
+      {
+        label: "PLAY_ON_ITCH",
+        url: "https://beingrkn.itch.io/chick-chick-go"
+      },
+      {
+        label: "WATCH_GAMEPLAY",
+        url: "https://www.youtube.com/watch?v=14FZys3CwiQ"
+      }
+    ]
+  },
+  {
     title: "Portfolio Web: Mehul Sen",
     category: "Web",
     tags: ["Design", "E-commerce"],

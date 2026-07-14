@@ -1,13 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
   title: "RKN",
-  description: "19-year-old developer creating Discord tools, Minecraft servers, and indie games.",
+  description: "Developer creating Discord tools, Minecraft servers, and indie games.",
   metadataBase: new URL("https://beingrkn.com"),
   keywords: [
     "RKN",
@@ -27,7 +24,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "RKN",
-    description: "19-year-old developer creating Discord tools, Minecraft servers, and indie games.",
+    description: "Developer creating Discord tools, Minecraft servers, and indie games.",
     url: "https://beingrkn.com",
     siteName: "RKN Portfolio",
     images: [
@@ -44,7 +41,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "RKN",
-    description: "19-year-old developer creating Discord tools, Minecraft servers, and indie games.",
+    description: "Developer creating Discord tools, Minecraft servers, and indie games.",
     creator: "@mebeingrkn",
     images: ["/pfpsite.png"],
   },
@@ -68,7 +65,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark scroll-smooth">
-      <body className={inter.className}>
+      <body className="antialiased">
         <Navbar />
         {children}
       </body>

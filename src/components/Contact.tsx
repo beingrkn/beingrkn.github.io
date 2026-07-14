@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 
@@ -191,25 +190,6 @@ export const Contact = () => {
             );
           })}
         </div>
-
-        {/* Resume Button */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3 }}
-          className="mt-20"
-        >
-          <a
-            href="/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-8 py-4 bg-white text-black font-bold rounded-full hover:bg-white/90 transition-all flex items-center gap-2.5 shadow-xl shadow-white/5 group"
-          >
-            Open Resume
-            <ArrowUpRight className="w-4 h-4 transition-transform" />
-          </a>
-        </motion.div>
       </div>
     </section>
   );

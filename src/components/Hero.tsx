@@ -12,15 +12,24 @@ export const Hero = () => {
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
         {/* Left Content */}
         <div className="lg:col-span-8 flex flex-col items-start">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.15, duration: 0.8 }}
+            className="text-sm md:text-base uppercase tracking-[0.3em] text-white/40 font-bold mb-6"
+          >
+            Hello, I&apos;m RKN
+          </motion.p>
+
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
             className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white mb-6 leading-[1.1]"
           >
-            Crafting digital <br />
+            Building Games, <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-cyan-400 to-blue-500">
-              spaces that scale.
+              Tools, and Online Communities
             </span>
           </motion.h1>
 
@@ -30,7 +39,7 @@ export const Hero = () => {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="text-lg md:text-xl text-white/60 max-w-2xl mb-8 leading-relaxed"
           >
-            19-year-old developer scaling and managing Discord tools that power <span className="text-white">76.8k+ communities</span> and <span className="text-white">17.3M+ members</span>, Minecraft servers, indie games, and meaningful internet products.
+            Developer scaling and managing Discord tools that power <span className="text-white">76.8k+ communities</span> and <span className="text-white">17.3M+ members</span>, Minecraft servers, indie games, and meaningful internet products.
           </motion.p>
 
           <motion.p
