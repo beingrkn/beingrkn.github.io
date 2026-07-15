@@ -211,7 +211,7 @@ projectList.addEventListener("click", event => {
   if (!row) return;
   const project = projects[Number(row.dataset.index)];
   if (project.title === "Chick Chick Go") {
-    location.href = "chickchickgo/";
+    location.href = "games/chickchickgo/";
     return;
   }
   const features = (project.features || []).map(feature => `
