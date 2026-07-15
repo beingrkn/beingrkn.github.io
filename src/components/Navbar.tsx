@@ -64,7 +64,7 @@ export const Navbar = () => {
     <>
       <div className="fixed top-6 left-0 right-0 z-[100] flex justify-center px-6">
         {/* Desktop Navigation */}
-        <nav className="hidden items-center gap-1 rounded-full border border-white/10 bg-white/[0.03] p-1.5 shadow-lg md:flex">
+        <nav className="hidden items-center gap-1 rounded-full border border-white/10 bg-black/80 p-1.5 shadow-lg backdrop-blur-md md:flex">
           {navItems.map((item) => (
             <Link
               key={item.name}
@@ -82,7 +82,7 @@ export const Navbar = () => {
         </nav>
 
         {/* Mobile Navigation Trigger Bar */}
-        <div className="relative z-[110] flex w-full max-w-[calc(100vw-3rem)] items-center justify-between rounded-full border border-white/10 bg-white/[0.03] px-5 py-3 shadow-lg md:hidden">
+        <div className="relative z-[110] flex w-full max-w-[calc(100vw-3rem)] items-center justify-between rounded-full border border-white/10 bg-black/80 px-5 py-3 shadow-lg backdrop-blur-md md:hidden">
           <Link
             href="/"
             onClick={() => setIsOpen(false)}
