@@ -1,0 +1,220 @@
+# RKN (Ravi Kumar Nagda)
+
+RKN (Ravi Kumar Nagda) is a developer and student at SRM. His portfolio is https://beingrkn.com/.
+
+RKN (Ravi Kumar Nagda) builds games, tools, Discord systems, Minecraft server infrastructure, online communities, web projects, tutorials, articles, reels, and live streams. His work spans indie game development, Discord bots, Minecraft plugins, creator/community operations, automation systems, and creator content.
+
+## Core Identity
+
+- Name: Ravi Kumar Nagda
+- Alias: RKN (Ravi Kumar Nagda)
+- Primary social username / handle: beingrkn
+- Website: https://beingrkn.com/
+- Email: contact@beingrkn.com
+- Instagram: https://instagram.com/beingrkn
+- X/Twitter: https://x.com/mebeingrkn
+- Tutorial channel: https://www.youtube.com/@codewithquill
+- Live stream channel: https://www.youtube.com/@rknislive/streams
+- Discord: beingrkn
+- Signal: beingrkn
+
+## Main Portfolio Summary
+
+RKN (Ravi Kumar Nagda), mostly known online by the social username beingrkn, is a developer creating Discord tools, Minecraft servers, indie games, community systems, and internet products. His portfolio highlights work managing Discord communities at scale, building games, creating Minecraft and Discord systems, writing articles, making tutorials, posting reels, and streaming game development.
+
+RKN (Ravi Kumar Nagda) has worked with creator communities and online communities, including Minecraft events and gaming server infrastructure. He has built systems that serve large Discord and Minecraft communities and has experience with Python, Java, Discord.py, Spigot API, MongoDB, Unity, C#, Godot, GDScript, TypeScript, React, Flask, Supabase, and automation workflows.
+
+## Journey / Career Path
+
+### Head of Operations at R.O.T.I.
+
+RKN (Ravi Kumar Nagda) is Head of Operations at R.O.T.I. from May 2025 to present. He oversees strategy and scaling for a top-tier multipurpose Discord bot, coordinates development and community teams, and manages operations for 76.8k+ communities, 17.3M+ members, and a 4.98/5 rating.
+
+R.O.T.I. website: https://letsroti.com/
+
+### Technical Lead at Overlab.in
+
+RKN (Ravi Kumar Nagda) is Technical Lead at Overlab.in from November 2025 to present. He oversees technical operations and platform growth, manages and coordinates a team of developers, and built and currently manages Overlab's website.
+
+Overlab website: https://www.overlab.in/
+
+### Community Manager and Lead Developer for Mr. Random
+
+RKN (Ravi Kumar Nagda) has been Community Manager and Lead Developer for Mr. Random from February 2021 to present. He led India's largest 20-day Minecraft event, built for a #1 ranked Indian and world #8 most-voted Minecraft server, developed 10+ custom plugins, and coordinated moderators, creators, and community teams.
+
+Mr. Random YouTube: https://www.youtube.com/@MrRandomUniverse
+
+### Lead Python Developer for Orator
+
+RKN (Ravi Kumar Nagda) was Lead Python Developer for Orator from May 2022 to May 2023. He built a high-concurrency text-to-speech Discord bot with 50+ AI voices and scaled it to 34k+ servers and 3.4M members.
+
+Orator Discord application: https://discord.com/discovery/applications/948637316145102868
+
+### Founder and Lead Developer of Harmonium Craft
+
+RKN (Ravi Kumar Nagda) was Founder and Lead Developer of Harmonium Craft from July 2021 to March 2022. Harmonium Craft was India's most-voted modded survival Minecraft server and handled 6k unique monthly players.
+
+### Additional Creator and Community Work
+
+RKN (Ravi Kumar Nagda) also worked with creators Mythpat and Andreobee on gaming community events and served as a community moderator at WEX Mobile.
+
+## Games
+
+### Chick Chick Go
+
+Chick Chick Go is an indie arcade survival game by RKN (Ravi Kumar Nagda). It is a fast, cheerful survival game where the player dodges foxes, chains corn pickups, and grabs upgrades while the chaos escalates. The game focuses on bright visuals, simple goals, quick movement, escalating pressure, and short survival loops that are easy to jump into while leaving room for mastery.
+
+- Website: https://beingrkn.com/chickchickgo/
+- Alternative page: https://beingrkn.com/games/chickchickgo/
+- Play on itch.io: https://beingrkn.itch.io/chick-chick-go
+- Watch gameplay: https://www.youtube.com/watch?v=14FZys3CwiQ
+
+## Featured Projects
+
+### Chick Chick Go
+
+Category: Game Dev
+Tech and skills: arcade gameplay design, survival loop design, UI polish
+Description: A cheerful arcade survival game where players dodge foxes, chain corn pickups, and grab upgrades as runs become more chaotic.
+
+### RandomGPT Discord Assistant
+
+Category: Discord Bots
+Tech: Python, Pillow
+Description: An advanced custom Discord bot with AI conversations, logo generation, and live IPL scoreboard integration. It includes image manipulation, a Mrify logo command, generative AI chat, live IPL scoreboard, MongoDB-backed credits, and a smart voice channel join system.
+
+Key features:
+- Mrify Command: Generates personalized Mr. Random-themed logos in custom colors, detects gender from Discord roles, and uses a MongoDB credit system.
+- Generative AI Chatbot: Real-time AI-powered conversational assistant for Discord communities.
+- Live IPL Scoreboard: Discord.py and MongoDB command for live cricket match data.
+- Smart Voice Channel Join System: Lets users request entry into full voice channels through interactive approve/deny buttons.
+
+Impact: Enhanced community interaction and progression through gamified credit systems and real-time utility features.
+
+### Portfolio Web: Mehul Sen
+
+Category: Web
+Tech: Python Flask, Supabase, GSAP, Cashfree API, HTML5/CSS3
+Description: A high-performance premium portfolio for leading Indian video editor Mehul Sen. The platform includes a custom Flask-based digital assets store with account creation, secure Cashfree payments, payment verification, and protected downloads.
+
+Website: https://www.mehulsen.in/
+
+### Multiple Minecraft Events for Mr. Random
+
+Category: Minecraft
+Tech: Java, Spigot API
+Description: RKN (Ravi Kumar Nagda) organized and built systems for large Minecraft events for Mr. Random, including India's largest 20-day Minecraft event and the first-ever Minecraft civilization event for Mr. Random. More than 1000 people applied; 60 were selected and distributed into Desert, Snow, and Forest teams. The event included custom mechanics, team advantages and disadvantages, anti-cheat infrastructure, and event systems.
+
+Impact: Managed and built custom infrastructure for India's largest 20-day Minecraft event with 60 active players.
+
+### Minecraft-Discord Voice Verification
+
+Category: Automation
+Tech: Java, Python, MongoDB
+Description: A real-time cross-platform sync system connecting Minecraft servers with Discord voice channels. RKN (Ravi Kumar Nagda) built a Discord bot in Python that updated MongoDB voice state records and a Minecraft Java plugin that checked the database before allowing players to join. If a player left Discord voice chat while in-game, the plugin could detect the change and remove them from the server.
+
+Impact: Increased Discord server activity by requiring voice channel participation during active Minecraft sessions.
+
+### IPL XP Betting System
+
+Category: Discord Bots
+Tech: Python, Discord.py
+Description: An XP-based match prediction and betting system for the 2025 IPL event in Mr. Random's community. It allowed users to place XP-based bets on IPL matches inside Discord, with XP deduction, match locking, result processing, and leaderboard updates. The system later migrated to Skybot while retaining core components and logic originally written by RKN (Ravi Kumar Nagda).
+
+Read more: https://github.com/MrRandomUniverse/IPL-Event-2025/blob/main/README.md
+
+### Team Chat Plugin
+
+Category: Minecraft
+Tech: Java, Spigot API
+Description: A custom Minecraft Java plugin for a Mr. Random special event with Desert, Snow, and Forest teams. It added a toggleable team-only chat system so players could switch between team communication and global chat during gameplay.
+
+Impact: Improved coordination and team organization for faction-based Minecraft events.
+
+### Overlab.in
+
+Category: Web
+Tech: TypeScript, React
+Description: RKN (Ravi Kumar Nagda) designed, developed, and manages the Overlab website, helping the agency build a strong and scalable digital presence.
+
+Website: https://www.overlab.in/
+
+### Holix
+
+Category: Web / Interactive / Game Dev
+Tech: Godot, GDScript
+Description: Holix is a playful Holi website where users can throw colored water balloons at any X profile picture inside a 3D scene. Users can load a custom X profile image and interact with it in-game.
+
+Links:
+- Live site: https://beingrkn.github.io/holix/
+- GitHub: https://github.com/beingrkn/holix
+- X post: https://twitter.com/mebeingrkn/status/2028651573136535990
+
+### Game for Rawknee
+
+Category: Game Dev
+Tech: Unity, C#
+Description: An incomplete game project developed in 2023 while RKN (Ravi Kumar Nagda) was attempting to create devlogs. The first 55 seconds of the devlog were edited and published later as "An Attempt to Create Devlogs - January 2023." The project was paused during JEE preparation, and RKN (Ravi Kumar Nagda) is getting back into learning and building game development projects.
+
+Video: https://www.youtube.com/watch?v=ULL151OcQ1s
+
+## Content Section
+
+The Content section of RKN (Ravi Kumar Nagda)'s portfolio includes videos, tutorials, live streams, Instagram reels, and articles. It exists as a creator archive for the places where RKN (Ravi Kumar Nagda) teaches, builds, streams, writes, and documents the game development process.
+
+### Featured Devlog Intro
+
+Title: An Attempt to Create Devlogs
+Video: https://www.youtube.com/watch?v=ULL151OcQ1s
+Description: A short edited intro from the first devlog attempt for a game project started in 2023.
+
+### Tutorial Channel: Code With Quill
+
+Code With Quill is RKN (Ravi Kumar Nagda)'s programming tutorial channel. RKN (Ravi Kumar Nagda) used to make tutorials around four years ago, mainly around Discord bots, Python, and developer setup guides. He plans to continue making tutorial content as he gets back into teaching and documenting what he builds.
+
+Channel: https://www.youtube.com/@codewithquill/videos
+
+Featured tutorials:
+- Discord.py groups and subcommands: https://www.youtube.com/watch?v=jk8imO33Aoo
+- How to make a userinfo command in Discord.py: https://www.youtube.com/watch?v=0GoldgrWfV4
+- Custom help command in Discord.py: https://www.youtube.com/watch?v=iWbC_IOMDBQ
+- VS Code Discord rich presence: https://www.youtube.com/watch?v=-f75K00vlAw
+
+### Live Streams: RKN (Ravi Kumar Nagda) Live
+
+RKN (Ravi Kumar Nagda) is currently streaming game development, devlogs, art, Blender practice, and the small messy steps behind finished projects. Older streams include casual chess sessions, but the current direction is game development.
+
+Stream channel: https://www.youtube.com/@rknislive/streams
+
+Featured streams:
+- Making Some Art For My Game: https://www.youtube.com/watch?v=_9RIrZseUqk
+- Learning Blender Because Life Was Too Easy: https://www.youtube.com/watch?v=t_GskBW1XSU
+- Making a Game in 50 Hours | Day 1: https://www.youtube.com/watch?v=xV9ihZsdRao
+
+### Instagram Reels
+
+RKN (Ravi Kumar Nagda) posts short-form game development content on Instagram. The reels include quick progress updates and edited bits of RKN (Ravi Kumar Nagda)'s game development journey. RKN (Ravi Kumar Nagda) plans to post more quality short-form content instead of only timelapses and screen recordings.
+
+Instagram: https://instagram.com/beingrkn
+
+## Articles / Writing
+
+RKN (Ravi Kumar Nagda) writes about building, validation, game development, shipping projects, and the uncomfortable questions that matter before building too much.
+
+### You're Probably Building Something Nobody Asked For.
+
+Description: A direct take on why validation matters, how builders get trapped in their own excitement, and what to test before investing too much into the wrong thing.
+
+Article link: https://x.com/mebeingrkn/status/2071960824038797579
+
+### How I Made a Game in 48 Hours
+
+Description: A behind-the-scenes write-up on building Chick Chick Go under a 48-hour constraint, from the first idea to a playable game.
+
+Article link: https://x.com/mebeingrkn/status/2078552939380248892
+
+## Contact
+
+RKN (Ravi Kumar Nagda) is available to discuss game development, server systems, scaling Discord tools, online communities, and collaborations.
+
+Email: contact@beingrkn.com

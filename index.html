@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="RKN, developer building games, tools, and online communities.">
+  <meta name="description" content="RKN, Ravi Kumar Nagda, developer building games, tools, Discord systems, Minecraft communities, content, and online projects.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://beingrkn.com/">
   <meta property="og:type" content="website">
@@ -25,13 +25,34 @@
         {
           "@type": "Person",
           "@id": "https://beingrkn.com/#person",
-          "name": "RKN",
+          "name": "Ravi Kumar Nagda",
+          "alternateName": ["RKN", "beingrkn"],
           "url": "https://beingrkn.com/",
           "image": "https://beingrkn.com/assets/pfpsite.png",
           "jobTitle": "Developer",
+          "description": "RKN is Ravi Kumar Nagda, also known online as beingrkn, a developer and student at SRM building indie games, Discord tools, Minecraft server systems, creator content, tutorials, live streams, and articles.",
+          "affiliation": {
+            "@type": "EducationalOrganization",
+            "name": "SRM"
+          },
+          "knowsAbout": [
+            "Game development",
+            "Indie games",
+            "Discord bots",
+            "Minecraft servers",
+            "Python",
+            "Java",
+            "Unity",
+            "Godot",
+            "Creator content",
+            "Technical tutorials",
+            "Live streaming"
+          ],
           "sameAs": [
             "https://x.com/mebeingrkn",
-            "https://instagram.com/beingrkn"
+            "https://instagram.com/beingrkn",
+            "https://www.youtube.com/@codewithquill",
+            "https://www.youtube.com/@rknislive"
           ]
         },
         {
@@ -48,7 +69,7 @@
           "@id": "https://beingrkn.com/#webpage",
           "url": "https://beingrkn.com/",
           "name": "RKN | Developer Portfolio",
-          "description": "RKN, developer building games, tools, and online communities.",
+          "description": "Portfolio of RKN, Ravi Kumar Nagda, covering game development, Discord tools, Minecraft communities, articles, tutorials, reels, and live streams.",
           "isPartOf": {
             "@id": "https://beingrkn.com/#website"
           },
@@ -60,7 +81,86 @@
               "@type": "VideoGame",
               "@id": "https://beingrkn.com/chickchickgo/#game",
               "name": "Chick Chick Go",
-              "url": "https://beingrkn.com/chickchickgo/"
+              "url": "https://beingrkn.com/chickchickgo/",
+              "description": "A cheerful arcade survival game by RKN with dodge-and-collect gameplay, corn pickups, fox enemies, and escalating upgrades."
+            },
+            {
+              "@type": "CollectionPage",
+              "@id": "https://beingrkn.com/#content",
+              "name": "RKN Content",
+              "description": "RKN's creator archive featuring a game devlog intro, Code With Quill programming tutorials, active game development live streams, Instagram reels, and written articles.",
+              "hasPart": [
+                {
+                  "@type": "VideoObject",
+                  "@id": "https://beingrkn.com/#devlog-intro",
+                  "name": "An Attempt to Create Devlogs",
+                  "description": "A short edited intro from RKN's first devlog attempt for a game project started in 2023.",
+                  "url": "https://www.youtube.com/watch?v=ULL151OcQ1s",
+                  "embedUrl": "https://www.youtube.com/embed/ULL151OcQ1s",
+                  "thumbnailUrl": "https://i.ytimg.com/vi/ULL151OcQ1s/hqdefault.jpg",
+                  "duration": "PT56S",
+                  "uploadDate": "2025-06-03",
+                  "creator": {
+                    "@id": "https://beingrkn.com/#person"
+                  }
+                },
+                {
+                  "@type": "CreativeWorkSeries",
+                  "@id": "https://beingrkn.com/#code-with-quill",
+                  "name": "Code With Quill",
+                  "description": "RKN's tutorial channel with older programming tutorials around Discord bots, Python, and developer setup guides, with plans to continue making tutorial content.",
+                  "url": "https://www.youtube.com/@codewithquill/videos",
+                  "creator": {
+                    "@id": "https://beingrkn.com/#person"
+                  }
+                },
+                {
+                  "@type": "CreativeWorkSeries",
+                  "@id": "https://beingrkn.com/#rkn-live",
+                  "name": "RKN Live Streams",
+                  "description": "RKN is actively streaming game development, devlogs, art, Blender practice, and the small process steps behind finished game projects.",
+                  "url": "https://www.youtube.com/@rknislive/streams",
+                  "creator": {
+                    "@id": "https://beingrkn.com/#person"
+                  }
+                },
+                {
+                  "@type": "CreativeWorkSeries",
+                  "@id": "https://beingrkn.com/#reels",
+                  "name": "RKN Instagram Reels",
+                  "description": "Short-form game development content from RKN including quick progress updates, edited bits of the game development journey, timelapses, and screen recordings.",
+                  "url": "https://instagram.com/beingrkn",
+                  "creator": {
+                    "@id": "https://beingrkn.com/#person"
+                  }
+                },
+                {
+                  "@type": "ItemList",
+                  "@id": "https://beingrkn.com/#articles",
+                  "name": "RKN Articles",
+                  "description": "RKN's writing on building, validation, game development, and shipping projects.",
+                  "itemListElement": [
+                    {
+                      "@type": "Article",
+                      "position": 1,
+                      "headline": "You're Probably Building Something Nobody Asked For.",
+                      "url": "https://x.com/mebeingrkn/status/2071960824038797579",
+                      "author": {
+                        "@id": "https://beingrkn.com/#person"
+                      }
+                    },
+                    {
+                      "@type": "Article",
+                      "position": 2,
+                      "headline": "How I Made a Game in 48 Hours",
+                      "url": "https://x.com/mebeingrkn/status/2078552939380248892",
+                      "author": {
+                        "@id": "https://beingrkn.com/#person"
+                      }
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }
@@ -87,7 +187,7 @@
       <a href="#journey">Journey</a>
       <a href="#games">Games</a>
       <a href="#projects">Projects</a>
-      <a href="#articles">Articles</a>
+      <a href="#articles">Content</a>
       <a href="#contact">Contact</a>
     </nav>
 
@@ -161,8 +261,97 @@
         <div id="project-list" class="project-list"></div>
       </section>
 
-      <section id="articles" class="section" data-section="articles">
-        <header class="section-head"><div class="index-label">Writing</div><h2>Articles</h2><p>Thoughts on building, validation, and the uncomfortable questions worth asking before shipping.</p></header>
+      <section id="articles" class="section content-section" data-section="articles">
+        <header class="section-head"><div class="index-label">Creator Archive</div><h2>Content</h2><p>Videos, tutorials, live streams, and short-form experiments from the places where I teach, build, and document the process.</p></header>
+
+        <div class="content-showcase">
+          <article class="featured-video">
+            <div class="featured-thumb featured-embed">
+              <iframe src="https://www.youtube.com/embed/ULL151OcQ1s?autoplay=1&mute=1&loop=1&playlist=ULL151OcQ1s&controls=0&modestbranding=1&playsinline=1&rel=0" title="An Attempt to Create Devlogs intro video" allow="autoplay; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="featured-copy">
+              <div class="tags"><span>GAME DEVLOG</span></div>
+              <h3>An Attempt to Create Devlogs</h3>
+              <p>A short edited intro from the first devlog attempt for a game project started in 2023.</p>
+              <a class="content-link" href="https://www.youtube.com/watch?v=ULL151OcQ1s" target="_blank" rel="noopener">Open on YouTube</a>
+            </div>
+          </article>
+
+          <div class="content-block">
+            <div class="content-block-head">
+              <div>
+                <div class="index-label">Tutorial Channel</div>
+                <h3>Code With Quill</h3>
+                <p class="content-note">I used to make programming tutorials around four years ago, mainly around Discord bots, Python, and small developer setup guides. I am planning to continue this again as I get back into teaching and documenting what I build.</p>
+              </div>
+              <a href="https://www.youtube.com/@codewithquill/videos" target="_blank" rel="noopener">View Channel</a>
+            </div>
+            <div class="video-grid tutorial-grid">
+              <a class="video-card" href="https://www.youtube.com/watch?v=jk8imO33Aoo" target="_blank" rel="noopener">
+                <img src="https://i.ytimg.com/vi/jk8imO33Aoo/hqdefault.jpg" alt="Discord.py groups and subcommands tutorial thumbnail">
+                <span>Discord.py groups and subcommands</span>
+              </a>
+              <a class="video-card" href="https://www.youtube.com/watch?v=0GoldgrWfV4" target="_blank" rel="noopener">
+                <img src="https://i.ytimg.com/vi/0GoldgrWfV4/hqdefault.jpg" alt="Discord.py userinfo command tutorial thumbnail">
+                <span>How to make a userinfo command</span>
+              </a>
+              <a class="video-card" href="https://www.youtube.com/watch?v=iWbC_IOMDBQ" target="_blank" rel="noopener">
+                <img src="https://i.ytimg.com/vi/iWbC_IOMDBQ/hqdefault.jpg" alt="Discord.py custom help command tutorial thumbnail">
+                <span>Custom help command in Discord.py</span>
+              </a>
+              <a class="video-card" href="https://www.youtube.com/watch?v=-f75K00vlAw" target="_blank" rel="noopener">
+                <img src="https://i.ytimg.com/vi/-f75K00vlAw/hqdefault.jpg" alt="VS Code Discord rich presence tutorial thumbnail">
+                <span>VS Code Discord rich presence</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="content-block">
+            <div class="content-block-head">
+              <div>
+                <div class="index-label">Live Streams</div>
+                <h3>Game Dev Streams</h3>
+                <p class="content-note">These days I am streaming live while working on game development, devlogs, art, Blender practice, and the small messy steps behind a finished project. Older streams include casual chess sessions, but the current direction is game development.</p>
+              </div>
+              <a href="https://www.youtube.com/@rknislive/streams" target="_blank" rel="noopener">View Streams</a>
+            </div>
+            <div class="stream-list">
+              <a href="https://www.youtube.com/watch?v=_9RIrZseUqk" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/_9RIrZseUqk/hqdefault.jpg" alt="Making Some Art For My Game stream thumbnail"><span>01</span><strong>Making Some Art For My Game</strong><em>1:45:34</em></a>
+              <a href="https://www.youtube.com/watch?v=t_GskBW1XSU" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/t_GskBW1XSU/hqdefault.jpg" alt="Learning Blender Because Life Was Too Easy stream thumbnail"><span>02</span><strong>Learning Blender Because Life Was Too Easy</strong><em>1:30:09</em></a>
+              <a href="https://www.youtube.com/watch?v=xV9ihZsdRao" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/xV9ihZsdRao/hqdefault.jpg" alt="Making a Game in 50 Hours stream thumbnail"><span>03</span><strong>Making a Game in 50 Hours | Day 1</strong><em>7:40:10</em></a>
+            </div>
+          </div>
+
+          <div class="content-block instagram-block">
+            <div class="content-block-head">
+              <div>
+                <div class="index-label">Instagram</div>
+                <h3>Reels</h3>
+                <p class="content-note">Quick progress updates, and edited bits of my game development journey, I plan to soon post more quality short form content instead of just timelapse and screen recordings.</p>
+              </div>
+              <a href="https://instagram.com/beingrkn" target="_blank" rel="noopener">@beingrkn</a>
+            </div>
+            <div class="reel-strip" aria-label="Instagram reel previews">
+              <a class="reel-card" href="https://instagram.com/beingrkn" target="_blank" rel="noopener" aria-label="Open Instagram reel preview 1">
+                <video src="assets/instagram/Video-46513.mp4" autoplay muted loop playsinline preload="metadata"></video>
+              </a>
+              <a class="reel-card" href="https://instagram.com/beingrkn" target="_blank" rel="noopener" aria-label="Open Instagram reel preview 2">
+                <video src="assets/instagram/Video-94585.mp4" autoplay muted loop playsinline preload="metadata"></video>
+              </a>
+              <a class="reel-card" href="https://instagram.com/beingrkn" target="_blank" rel="noopener" aria-label="Open Instagram reel preview 3">
+                <video src="assets/instagram/Video-28129.mp4" autoplay muted loop playsinline preload="metadata"></video>
+              </a>
+              <a class="reel-card" href="https://instagram.com/beingrkn" target="_blank" rel="noopener" aria-label="Open Instagram reel preview 4">
+                <video src="assets/instagram/Video-51598.mp4" autoplay muted loop playsinline preload="metadata"></video>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="articles-subhead">
+          <div class="index-label">Writing</div>
+          <h3>Articles</h3>
+        </div>
         <div class="articles-list">
           <a class="article-feature" href="https://x.com/mebeingrkn/status/2071960824038797579" target="_blank">
             <img src="assets/articles/youre-probably-building-something-nobody-asked-for/banner.png" alt="You're Probably Building Something Nobody Asked For article banner">
