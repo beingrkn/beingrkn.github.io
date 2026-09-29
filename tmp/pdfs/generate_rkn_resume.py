@@ -208,7 +208,7 @@ def build():
         [[[
             Paragraph("Ravi Kumar Nagda", styles["Name"]),
             Paragraph(
-                "Email: contact@beingrkn.com&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;Twitter: @mebeingrkn&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;LinkedIn: linkedin.com/in/beingrkn",
+                "Email: contact@beingrkn.com&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;Twitter: @mebeingrkn&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;LinkedIn: linkedin.com/in/mebeingrkn",
                 styles["Contact"],
             ),
         ]]],
@@ -342,7 +342,7 @@ def build():
     story.append(
         project_item(
             "Mehul Sen Portfolio & Store",
-            "Python Flask, Supabase, GSAP, Cashfree API",
+            "Python Flask, Supabase, Cashfree API",
             [
                 "Designed and developed a premium portfolio website for Mehul Sen, a leading Indian video editor.",
                 "Added a custom digital store with accounts, secure Cashfree checkout, payment verification, and protected asset downloads.",
@@ -353,9 +353,9 @@ def build():
 
     story.extend(section("Skills & Tech Stack", styles))
     skills = [
-        ("Languages", "Python, Java, JavaScript, TypeScript, GDScript, C#"),
-        ("Frameworks & Libraries", "React, Flask, Discord.py, Tailwind CSS, GSAP, Spigot API, Pillow"),
-        ("Databases & Cloud", "MongoDB, Supabase, SQL, Docker, Git"),
+        ("Languages", "Python, Java, C, GDScript, C#"),
+        ("Frameworks & Libraries", "Flask, Discord.py, Spigot API, Pillow"),
+        ("Databases & Cloud", "MongoDB, Supabase, Git"),
         ("Engines", "Unity, Godot"),
         ("Soft Skills", "Community management, technical leadership, team coordination, operations scaling, creator collaboration, product thinking, problem solving"),
     ]
