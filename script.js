@@ -1,5 +1,19 @@
 const projects = [
   {
+    title: "Temp Tension",
+    category: "Game Dev",
+    tags: ["Indie Game", "Survival", "BYOG 2026"],
+    tech: "Godot, GDScript",
+    fullTech: "Godot, GDScript, Survival Loop Design, Game Jam Scope",
+    description: "A 72-hour survival game where your life is time, resources decay, and every pickup has to be claimed before it disappears.",
+    full: `Temp Tension is a survival game made for BYOG 2026 in under 72 hours. Your lifetime is the main resource: if it reaches zero, the run ends.
+
+Wood and stone do not stay forever, and even stored inventory decays over time. You bring resources inside your red range circle, select them with the arrow keys, and press Space to claim them before they disappear. Crafting tools like the axe and pickaxe helps automate pickups while enemies keep pressuring your remaining lifetime.`,
+    image: "assets/games/temp-tension/banner.png",
+    impact: "Shipped a complete game jam build with resource decay, crafting pressure, automatic tools, and three enemy behaviors.",
+    links: [["Play on beingrkn.com", "temptension/"], ["Play on itch.io", "https://beingrkn.itch.io/temp-tension"]]
+  },
+  {
     title: "Chick Chick Go",
     category: "Game Dev",
     tags: ["Indie Game", "Arcade Survival", "Game Jam"],
@@ -212,6 +226,10 @@ projectList.addEventListener("click", event => {
   const project = projects[Number(row.dataset.index)];
   if (project.title === "Chick Chick Go") {
     location.href = "games/chickchickgo/";
+    return;
+  }
+  if (project.title === "Temp Tension") {
+    location.href = "games/temptension/";
     return;
   }
   const features = (project.features || []).map(feature => `

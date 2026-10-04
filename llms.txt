@@ -69,7 +69,21 @@ Chick Chick Go is an indie arcade survival game by RKN (Ravi Kumar Nagda). It is
 - Play on itch.io: https://beingrkn.itch.io/chick-chick-go
 - Watch gameplay: https://www.youtube.com/watch?v=14FZys3CwiQ
 
+### Temp Tension
+
+Temp Tension is an indie survival game by RKN (Ravi Kumar Nagda), made for the BYOG 2026 game jam in under 72 hours. The player's life is time: if lifetime reaches zero, the run ends. Resources such as wood and stone decay in the world, inventory resources can disappear over time, and pickups must be brought inside the red range circle, selected with the arrow keys, and claimed with Space before they vanish. Players can craft tools like the axe and pickaxe to automatically pick up nearby resources while surviving red, green, and purple enemies that reduce or steal lifetime.
+
+- Website: https://beingrkn.com/temptension/
+- Alternative page: https://beingrkn.com/games/temptension/
+- Play on itch.io: https://beingrkn.itch.io/temp-tension
+
 ## Featured Projects
+
+### Temp Tension
+
+Category: Game Dev
+Tech and skills: Godot, GDScript, survival loop design, game jam scope
+Description: A 72-hour BYOG 2026 survival game where life is time, resources decay, and the player must claim pickups, craft tools, and survive three enemy behaviors.
 
 ### Chick Chick Go
 

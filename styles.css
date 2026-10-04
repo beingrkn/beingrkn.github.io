@@ -49,13 +49,14 @@ body{background:var(--paper);color:var(--ink)}
 .timeline-item h3 a,.timeline-item h3 span{color:var(--muted)}
 .aside-note{border-left:1px solid var(--line);font-family:var(--sans);font-size:.9rem;color:var(--muted)}
 .game-feature{border:0;grid-template-columns:1.35fr .65fr;gap:2.5rem}
+.game-feature+.game-feature{margin-top:4rem}
 .image-button{border:0;background:#080908}
 .image-button span{background:rgba(0,0,0,.72);color:white}
 .game-copy{padding:0}
 .game-copy h3{font-family:var(--sans);font-weight:500;letter-spacing:-.04em}
 .tags span{border:0;border-bottom:1px solid var(--line);padding:.35rem 0;margin-right:.8rem;color:var(--muted)}
 .split-links{border-color:var(--line)}
-.screenshots{background:transparent;border:0;gap:.65rem}
+.screenshots{background:transparent;border:0;gap:.65rem;margin-bottom:4rem}
 .screenshots img{filter:grayscale(.65);opacity:.72}
 .project-head{align-items:start}
 .project-head>div:first-child>p{max-width:450px;color:var(--muted);font-size:.9rem;line-height:1.65}
