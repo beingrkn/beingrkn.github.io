@@ -76,6 +76,7 @@ Temp Tension is an indie survival game by RKN (Ravi Kumar Nagda), made for the B
 - Website: https://beingrkn.com/temptension/
 - Alternative page: https://beingrkn.com/games/temptension/
 - Play on itch.io: https://beingrkn.itch.io/temp-tension
+- Watch trailer: https://www.youtube.com/watch?v=VLw7bXhMBYY
 
 ## Featured Projects
 

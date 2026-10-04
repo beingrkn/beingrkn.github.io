@@ -10,8 +10,9 @@ const projects = [
 
 Wood and stone do not stay forever, and even stored inventory decays over time. You bring resources inside your red range circle, select them with the arrow keys, and press Space to claim them before they disappear. Crafting tools like the axe and pickaxe helps automate pickups while enemies keep pressuring your remaining lifetime.`,
     image: "assets/games/temp-tension/banner.png",
+    videos: ["https://www.youtube.com/embed/VLw7bXhMBYY"],
     impact: "Shipped a complete game jam build with resource decay, crafting pressure, automatic tools, and three enemy behaviors.",
-    links: [["Play on beingrkn.com", "temptension/"], ["Play on itch.io", "https://beingrkn.itch.io/temp-tension"]]
+    links: [["Play on beingrkn.com", "temptension/"], ["Watch Trailer", "https://www.youtube.com/watch?v=VLw7bXhMBYY"], ["Play on itch.io", "https://beingrkn.itch.io/temp-tension"]]
   },
   {
     title: "Chick Chick Go",
@@ -279,7 +280,12 @@ const screenshotPaths = [
   "assets/games/chick-chick-go/screenshot-1.png",
   "assets/games/chick-chick-go/screenshot-2.png",
   "assets/games/chick-chick-go/screenshot-3.png",
-  "assets/games/chick-chick-go/screenshot-4.png"
+  "assets/games/chick-chick-go/screenshot-4.png",
+  "assets/games/temp-tension/screenshot-1.png",
+  "assets/games/temp-tension/screenshot-2.png",
+  "assets/games/temp-tension/screenshot-3.png",
+  "assets/games/temp-tension/screenshot-4.png",
+  "assets/games/temp-tension/screenshot-5.png"
 ];
 const lightbox = document.querySelector("#lightbox");
 const lightboxImage = lightbox.querySelector("img");
