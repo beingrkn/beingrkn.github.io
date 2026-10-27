@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ravi Kumar Nagda — developer building games, tools, and systems for online communities.">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://beingrkn.com/linktree/">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Ravi Kumar Nagda — Links">
+  <meta property="og:description" content="Projects, content, and places to find Ravi online.">
+  <meta property="og:url" content="https://beingrkn.com/linktree/">
+  <meta property="og:image" content="https://beingrkn.com/linktree/profile.png">
+  <title>Ravi Kumar Nagda — Links</title>
+  <link rel="icon" href="profile.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <header class="profile">
+      <a href="/" aria-label="Visit Ravi Kumar Nagda's portfolio">
+        <img src="profile.png" alt="Illustrated portrait of Ravi Kumar Nagda">
+      </a>
+      <h1>Ravi Kumar Nagda</h1>
+      <p class="username">@beingrkn</p>
+      <p class="bio">Developer and student who loves making games &amp; game development related content (Devlogs, Articles, Live Streams &amp; more)</p>
+    </header>
+
+    <main>
+      <section aria-labelledby="main-links">
+        <h2 id="main-links">Main</h2>
+        <div class="links">
+          <a class="link" href="/">
+            <strong>Portfolio</strong>
+            <span>Work, experience, and everything I have built</span>
+          </a>
+        </div>
+      </section>
+
+      <section aria-labelledby="project-links">
+        <h2 id="project-links">Projects</h2>
+        <div class="links">
+          <a class="link" href="/games/temptension/">
+            <strong>Temp Tension</strong>
+            <span>Survival game where time is your life</span>
+          </a>
+          <a class="link" href="/games/chickchickgo/">
+            <strong>Chick Chick Go</strong>
+            <span>A fast arcade survival game about dodging foxes and collecting corn</span>
+          </a>
+          <a class="link" href="/#projects">
+            <strong>More....</strong>
+            <span>View all projects on my portfolio</span>
+          </a>
+        </div>
+      </section>
+
+      <section aria-labelledby="social-links">
+        <h2 id="social-links">Socials</h2>
+        <div class="links">
+          <a class="link compact" href="https://www.linkedin.com/in/mebeingrkn/" target="_blank" rel="noopener">
+            <strong>LinkedIn</strong>
+            <span>Ravi Kumar Nagda</span>
+          </a>
+          <a class="link compact" href="https://x.com/mebeingrkn" target="_blank" rel="noopener">
+            <strong>X / Twitter</strong>
+            <span>@mebeingrkn</span>
+          </a>
+          <a class="link compact" href="https://instagram.com/beingrkn" target="_blank" rel="noopener">
+            <strong>Instagram</strong>
+            <span>@beingrkn</span>
+          </a>
+          <a class="link compact" href="https://www.youtube.com/@codewithquill/videos" target="_blank" rel="noopener">
+            <strong>YouTube (Tutorials)</strong>
+            <span>Code With Quill</span>
+          </a>
+          <a class="link compact" href="https://www.youtube.com/@hellorkn" target="_blank" rel="noopener">
+            <strong>YouTube</strong>
+            <span>RKN</span>
+          </a>
+          <button class="link compact copy-link" type="button" data-copy="beingrkn">
+            <strong>Signal</strong>
+            <span class="copy-text" aria-live="polite">beingrkn · Copy</span>
+          </button>
+          <button class="link compact copy-link" type="button" data-copy="beingrkn">
+            <strong>Discord</strong>
+            <span class="copy-text" aria-live="polite">beingrkn · Copy</span>
+          </button>
+        </div>
+      </section>
+
+      <section aria-labelledby="contact-links">
+        <h2 id="contact-links">Email</h2>
+        <div class="links">
+          <a class="link compact email-link" href="mailto:contact@beingrkn.com">
+            <strong>contact@beingrkn.com</strong>
+            <span>Primary</span>
+          </a>
+          <a class="link compact email-link" href="mailto:ravikumarnagda@gmail.com">
+            <strong>ravikumarnagda@gmail.com</strong>
+            <span>Personal</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>contact@beingrkn.com <span>or</span> ravikumarnagda@gmail.com</p>
+    </footer>
+  </div>
+
+  <script>
+    document.querySelectorAll('[data-copy]').forEach((button) => {
+      button.addEventListener('click', async () => {
+        const copyText = button.querySelector('.copy-text');
+        try {
+          await navigator.clipboard.writeText(button.dataset.copy);
+          copyText.textContent = 'beingrkn · Copied';
+          window.setTimeout(() => { copyText.textContent = 'beingrkn · Copy'; }, 1500);
+        } catch {
+          copyText.textContent = button.dataset.copy;
+        }
+      });
+    });
+  </script>
+</body>
+</html>
